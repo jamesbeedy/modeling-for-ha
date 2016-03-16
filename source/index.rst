@@ -1,30 +1,21 @@
 .. revealjs:: HA Openstack Ops
 
-.. revealjs::
+    James Beedy
+    3/16/2016
 
-  .. revealjs:: About me
+.. revealjs:: About Me
 
     Cloud Engineer, Dark Horse Comics
 
-    Sys admin, net admin, storage admin, hacker
+    Sys admin, net admin, storage admin, hacker, stacker
 
     Ubuntu, Debian, FreeBSD, OpenStack, etc
 
-  .. revealjs:: What I do
 
-    Infrastructure hosting and design for public facing web applications, testing environment, staging environment, internal business projects
 
-    Software engineers need to learn devops --> Don't you want to know how to do things?
+.. revealjs:: So why Openstack?
 
-    Public cloud, private cloud, co-location, mirroring, distributed computing/networking/storage
-
-.. revealjs:: Openstack History and Adventure
-
-.. revealjs::
-
-  .. revealjs:: So why Openstack?
-
-    .. rst-class:: fragment
+  .. rst-class:: fragment
 
       Large user base, plugable, zero lock in, opensource, trust
 
@@ -36,9 +27,28 @@
 
       Experience for operators and developers --> larger community ==> stronger/better/safer/faster/reliable software
 
-  .. revealjs:: The beginning
 
-    .. rst-class:: fragment
+
+.. revealjs:: Why Openstack HA?
+
+  .. rst-class:: fragment
+
+     Need openstack service resiliency
+     
+       *  Maintanence
+       *  0 Down time
+       *  Upgrades
+
+
+.. revealjs:: How can we make openstack HA
+
+  .. Tooling - more here
+
+
+
+.. revealjs:: The beginning
+
+  .. rst-class:: fragment
 
       2009 VMWare - ESXi
 
@@ -56,9 +66,10 @@
 
       Chef
 
-  .. revealjs:: Juju - Big Software - Modeling
 
-    .. rst-class:: fragment
+.. revealjs:: Juju - Big Software - Modeling
+
+  .. rst-class:: fragment
 
       Openstack, Big data stacks, web applications
 
@@ -73,9 +84,10 @@
     .. __: http://jujucharms.com
 
 
-  .. revealjs:: Webapps and DBS
 
-    .. rst-class:: fragment
+.. revealjs:: Webapps and DBS
+
+  .. rst-class:: fragment
 
       Every webapp needs the same things, usually in different places
       
@@ -86,71 +98,60 @@
       Replicable environments accross heterogeneous providers
 
 
-  .. revealjs:: All Openstack services can be configured to be HA!
 
-    .. rst-class:: fragment
+.. revealjs:: All Openstack services can be configured to be HA!
+
+  .. rst-class:: fragment
 
       Different services need different HA architectures
-          * Stateless services
+          Stateless services
               * API endpoints
               * Schedulers
               * Service Agents
 
-          * Statefull Services
+          Statefull Services
               * Messaging queues
               * Databases
               * Storage
-      
-      Abstract from cfgmgmt --> save cycles
-
-      Automate everything
-
-      Replicable environments accross heterogeneous providers
 
 
+ revealjs:: Deploy MySQL
 
-
-
-
-
-
-  .. revealjs:: Deploy MySQL
-
-    .. rv_code::
+  .. rv_code::
 
       $ juju deploy mysql
       $ juju deploy mysql-slave -n2
       $ juju add-relation mysql:master mysql-slave:slave
 
 
-  .. revealjs:: Deploy PostgreSQL Cluster
+.. revealjs:: Deploy PostgreSQL Cluster
 
-    .. rv_code::
+  .. rv_code::
 
       $ juju deploy postgresql
       $ juju add-unit postgresql -n2
 
 
-  .. revealjs:: Deploy Percona-cluster - ExtraDB
+.. revealjs:: Deploy Percona-cluster - ExtraDB
 
-    .. rv_code::
+  .. rv_code::
       
       $ juju deploy percona-cluster -n 3 --config charmconf.yaml
       $ juju deploy hacluster percona-hacluster --config charmconf.yaml
       $ juju add-relation percona-hacluster percona-cluster
 
 
-  .. revealjs:: Deploy MongoDB - Replica Set
+.. revealjs:: Deploy MongoDB - Replica Set
 
-    .. rv_code::
+  .. rv_code::
       
       $ juju deploy mongodb -n 2
       $ juju add-unit mongodb -n 2
 
 
-  .. revealjs:: Deploy MongoDB Sharded Cluster
+.. revealjs:: Deploy MongoDB Sharded Cluster
 
-    .. rv_code::
+  .. rv_code::
       
       $ juju deploy mongodb configsvr --config charmconf.yaml -n3
       $ juju deploy mongodb mongos
@@ -163,10 +164,16 @@
       $ juju add-relation mongos:mongos shard3:database
 
 
+.. revealjs:: Deploy Present
 
-  .. revealjs:: DB Admin Ops
+  .. rv_code::
 
-    .. rst-class:: fragment
+     
+
+
+.. revealjs:: DB Admin Ops
+
+  .. rst-class:: fragment
 
      Scale out - Distributed INSERT/parallel query, HA, DR
 
