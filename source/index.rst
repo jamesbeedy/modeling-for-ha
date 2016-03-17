@@ -115,9 +115,9 @@
               
               
 .. revealjs:: All Openstack services can be configured to be HA!
-   :title-heading: h2
-   :subtitle: Different techniques can be used for each service
-   :subtitle-heading: h4
+ :title-heading: h2
+ :subtitle: Different techniques can be used for each service
+ :subtitle-heading: h4
 
   .. rst-class:: fragment
 
@@ -135,7 +135,7 @@
 
 .. revealjs:: Example Juju Openstack Bundle
 
-   .. image:: https://raw.githubusercontent.com/jamesbeedy/pgexplain/master/1.png
+   .. image:: _images/1.png
 
 
 
