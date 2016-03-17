@@ -30,14 +30,15 @@
 
 
 .. revealjs:: Why Openstack HA?
-
+ :subtitle: Must have openstack service resiliency
+ 
   .. rst-class:: fragment
 
-     Need openstack service resiliency
-     
-       *  Maintanence
-       *  0 Down time
-       *  Upgrades
+  .. list-table::
+
+   * - Maintanence
+   * - 0 Down time
+   * - Release Upgrades
 
 
 .. revealjs:: The beginning
@@ -62,7 +63,7 @@
 
 
 .. revealjs:: Juju - Big Software - Modeling
-   :title-heading: h2
+ :title-heading: h2
 
   .. rst-class:: fragment
 
@@ -84,34 +85,23 @@
 
 
 
- .. revealjs:: Webapps and DBS 
-
-      Every webapp needs the same things, usually in different places
-      
-      Abstract from cfgmgmt --> save cycles
-
-      Automate everything
-
-      Replicable environments accross heterogeneous providers
-
-
-
-.. revealjs:: All Openstack services can be configured to be HA!
- :subtitle: Different techniques can be used for each service
+.. revealjs:: All Openstack services can be HA!
+ :title-heading: h2
+ :subtitle: Different techniques can/should be used for each type of service
  :subtitle-heading: h4
 
   .. rst-class:: fragment
 
       Different services need different HA architectures
           * Stateless services
-              * API endpoints
-              * Schedulers
-              * Service Agents
+              - API endpoints
+              - Schedulers
+              - Service Agents
 
           * Statefull Services
-              * Messaging queues
-              * Databases
-              * Storage
+              - Messaging queues
+              - Databases
+              - Storage
 
 
 .. revealjs:: Example Juju Openstack Bundle
