@@ -11,36 +11,6 @@
 
     Ubuntu, Debian, FreeBSD, OpenStack, etc
 
-
-
-.. revealjs:: So why Openstack?
-
-  .. rst-class:: fragment
-
-      Large user base, plugable, zero lock in, opensource, trust
-
-      Works great for deployments that need to scale, or virtual laptop labs 
-
-      Needed a flexible and elastic environment for testing, staging
-
-      Projects are requesting more flexible computing resources
-
-      Experience for operators and developers --> larger community ==> stronger/better/safer/faster/reliable software
-
-
-
-.. revealjs:: Why Openstack HA?
- :subtitle: Must have openstack service resiliency
- 
-  .. rst-class:: fragment
-
-  .. list-table::
-
-   * - Maintanence
-   * - 0 Down time
-   * - Release Upgrades
-
-
 .. revealjs:: The beginning
 
   .. rst-class:: fragment
@@ -79,10 +49,35 @@
 
       Write charms in any language!
       
-      Now developed under the Big Tent!
+      Openstack charms Now developed under the Big Tent!
   
 
+.. revealjs:: So why Openstack?
 
+  .. rst-class:: fragment
+
+      Large user base, plugable, zero lock in, opensource, trust
+
+      Works great for deployments that need to scale, or virtual laptop labs 
+
+      Needed a flexible and elastic environment for testing, staging
+
+      Projects are requesting more flexible computing resources
+
+      Experience for operators and developers --> larger community ==> stronger/better/safer/faster/reliable software
+
+
+
+.. revealjs:: Why Openstack HA?
+ :subtitle: Must have openstack service resiliency
+ 
+  .. rst-class:: fragment
+
+  .. list-table::
+
+   * - Maintanence
+   * - 0 Down time
+   * - Release Upgrades
 
 
 .. revealjs:: All Openstack services can be HA!
@@ -103,6 +98,8 @@
               - Databases
               - Storage
 
+
+.. revealjs:: HOW?              
 
 .. revealjs:: Example Juju Openstack Bundle
 
