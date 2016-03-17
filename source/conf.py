@@ -83,7 +83,7 @@ html_theme = 'revealjs'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {"slide_number": True,
-                      "lang": "ja",
+                      "lang": "en",
                       "controls": True,
                       "progress": True,
                       "history": True,
