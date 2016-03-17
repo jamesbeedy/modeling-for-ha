@@ -95,6 +95,13 @@
 
 
 
+
+
+
+
+
+
+
 .. revealjs:: Example Juju Openstack Bundle
 
    .. image:: _images/l3_ha_bundle.png
@@ -147,7 +154,9 @@
       $ juju add-relation percona-hacluster percona-cluster
 
 
-.. revealjs:: Deploy MongoDB - Replica Set
+.. revealjs:: Deploy MongoDB
+
+     Replica Set
 
   .. rv_code::
 
@@ -155,7 +164,7 @@
       $ juju add-unit mongodb -n 2
 
 
-.. revealjs:: Deploy MongoDB Sharded Cluster
+    Sharded Cluster
 
   .. rv_code::
 
