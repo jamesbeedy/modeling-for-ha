@@ -137,7 +137,10 @@
 
  .. rst-class:: fragment
 
-     * - Hacluster charm
+
+
+     `Hacluster charm <https://jujucharms.com/hacluster>`_
+
        - Corosync
        - Pacemaker
        - Haproxy
