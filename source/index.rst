@@ -75,12 +75,12 @@
 
   .. rst-class:: fragment
 
-      * Stateless services
+      * - Stateless services
         - API endpoints
         - Schedulers
         - Service Agents
 
-      * Stateful Services
+      * - Stateful Services
         - Messaging queues
         - Databases
         - Storage
