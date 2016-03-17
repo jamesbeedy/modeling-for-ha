@@ -55,7 +55,7 @@
 
       Write charms in any language!
 
-      Openstack charms Now developed under the Big Tent!
+      Openstack charms now developed under the Big Tent!
 
 
 .. revealjs:: Why Openstack HA?
