@@ -80,12 +80,11 @@
       
       Now developed under the Big Tent!
   
-    .. __: http://jujucharms.com
 
 
-.. revealjs:: Webapps and DBS
 
-  .. rst-class:: fragment
+
+ .. revealjs:: Webapps and DBS 
 
       Every webapp needs the same things, usually in different places
       
@@ -98,24 +97,6 @@
 
 
 .. revealjs:: All Openstack services can be configured to be HA!
-
-  .. rst-class:: fragment
-
-      Different services need different HA architectures
-          Stateless services
-              * API endpoints
-              * Schedulers
-              * Service Agents
-
-          Statefull Services
-              * Messaging queues
-              * Databases
-              * Storage
-
-              
-              
-.. revealjs:: All Openstack services can be configured to be HA!
- :title-heading: h2
  :subtitle: Different techniques can be used for each service
  :subtitle-heading: h4
 
@@ -136,27 +117,27 @@
 .. revealjs:: Example Juju Openstack Bundle
 
    .. image:: _images/l3_ha_bundle.png
-    :target: http://github.com/jamesbeedy/pgexplain
-    :width: 500
-    :height: 400
-    :alt: juju status --format tabular
+    :width: 600
+    :height: 550
+    :target: https://github.com/jamesbeedy/layer-present
+    :alt: l3_ha_bundle
 
 
 .. revealjs:: Juju Status View
 
    .. image:: _images/wjst.png
-    :target: http://lab.hakim.se/meny/
-    :width: 500
-    :height: 400
-    :alt: juju status view
+    :width: 600
+    :height: 550
+    :target: https://github.com/jamesbeedy/pgexplain
+    :alt: juju_status_view
 
 .. revealjs:: Juju Gui View
 
-   .. image:: _images/wjst.png
-    :target: http://lab.hakim.se/meny/
+   .. image:: _images/juju_gui.png
     :width: 500
-    :height: 400
-    :alt: juju gui view
+    :height: 550
+    :alt: juju_gui_view
+    :target: https://github.com/jamesbeedy/os-ha-meetup-present
 
 
 .. revealjs:: Deploy MySQL
@@ -209,10 +190,6 @@
               
 
 
-.. __: http://jujucharms.com
-.. __: https://openstack.org
-.. __: https://github.com/jamesbeedy
-
 .. revealjs:: Future Plans
 
   * Teststack for openstack upgrades
@@ -225,11 +202,5 @@
 
   James Beedy
 
-  jamesbeedy@gmail.com
 
-  `@jamesbeedy`_
 
-  https://www.github.com/jamesbeedy/dhc_ops_presentation
-  https://www.github.com/jamesbeedy/layer-present
-
-.. _@jamesbeedy: http://twitter.com/jamesbeedy
