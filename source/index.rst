@@ -124,7 +124,7 @@
 .. revealjs:: Juju Gui View
 
    .. image:: _images/juju_gui.png
-    :width: 500
+    :width: 700
     :height: 550
     :alt: juju_gui_view
     :target: https://github.com/jamesbeedy/os-ha-meetup-present
