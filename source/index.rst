@@ -23,7 +23,7 @@
 
       2012 Openstack Essex Release
 
-      Handroll 
+      Handroll
 
       Devstack/vagrant
 
@@ -33,24 +33,24 @@
 
 
 .. revealjs:: Juju - Big Software - Modeling
- :title-heading: h2
+ :title-heading: h3
 
-  .. rst-class:: fragment
+  .. rst-class:: fragment grow
 
-      Openstack, Big data stacks, web applications
+      Openstack, Big data stacks, web applications!
 
-      Abstract from cfgmgmt --> save cycles
+      Abstract from cfgmgmt --> save cycles!
 
-      Model complex environments!!!! ++1 :-)
+      Model complex environments!
 
-      Replicable environments accross heterogeneous providers!
+      Replicable environments across heterogeneous providers!
 
       Use cfgmgmt tools (chef, puppet, ansible) underneath!
 
       Write charms in any language!
-      
+
       Openstack charms Now developed under the Big Tent!
-  
+
 
 .. revealjs:: So why Openstack?
 
@@ -58,7 +58,7 @@
 
       Large user base, plugable, zero lock in, opensource, trust
 
-      Works great for deployments that need to scale, or virtual laptop labs 
+      Works great for deployments that need to scale, or virtual laptop labs
 
       Needed a flexible and elastic environment for testing, staging
 
@@ -70,7 +70,7 @@
 
 .. revealjs:: Why Openstack HA?
  :subtitle: Must have openstack service resiliency
- 
+
   .. rst-class:: fragment
 
   .. list-table::
@@ -87,26 +87,30 @@
 
   .. rst-class:: fragment
 
-      Different services need different HA architectures
-          * Stateless services
-              - API endpoints
-              - Schedulers
-              - Service Agents
+      * Stateless services
+        - API endpoints
+        - Schedulers
+        - Service Agents
 
-          * Statefull Services
-              - Messaging queues
-              - Databases
-              - Storage
+      * Stateful Services
+        - Messaging queues
+        - Databases
+        - Storage
 
 
-.. revealjs:: HOW?              
+.. revealjs:: Lets start small
+ :subtitle: presentation
+
+
+
+
 
 .. revealjs:: Example Juju Openstack Bundle
 
    .. image:: _images/l3_ha_bundle.png
     :width: 600
     :height: 550
-    :target: https://github.com/jamesbeedy/layer-present
+    :target: https://raw.githubusercontent.com/jamesbeedy/os-ha-meetup-present/master/source/_images/l3_ha_bundle.png
     :alt: l3_ha_bundle
 
 
@@ -115,7 +119,7 @@
    .. image:: _images/wjst.png
     :width: 600
     :height: 550
-    :target: https://github.com/jamesbeedy/pgexplain
+    :target: https://raw.githubusercontent.com/jamesbeedy/os-ha-meetup-present/master/source/_images/wjst.png
     :alt: juju_status_view
 
 .. revealjs:: Juju Gui View
@@ -124,7 +128,7 @@
     :width: 700
     :height: 550
     :alt: juju_gui_view
-    :target: https://github.com/jamesbeedy/os-ha-meetup-present
+    :target: https://raw.githubusercontent.com/jamesbeedy/os-ha-meetup-present/master/source/_images/juju_gui.png
 
 
 .. revealjs:: Deploy MySQL
@@ -147,7 +151,7 @@
 .. revealjs:: Deploy Percona-cluster - ExtraDB
 
   .. rv_code::
-      
+
       $ juju deploy percona-cluster -n 3 --config charmconf.yaml
       $ juju deploy hacluster percona-hacluster --config charmconf.yaml
       $ juju add-relation percona-hacluster percona-cluster
@@ -156,7 +160,7 @@
 .. revealjs:: Deploy MongoDB - Replica Set
 
   .. rv_code::
-      
+
       $ juju deploy mongodb -n 2
       $ juju add-unit mongodb -n 2
 
@@ -164,7 +168,7 @@
 .. revealjs:: Deploy MongoDB Sharded Cluster
 
   .. rv_code::
-      
+
       $ juju deploy mongodb configsvr --config charmconf.yaml -n3
       $ juju deploy mongodb mongos
       $ juju deploy mongodb shard1 --config charmconf.yaml -n3
@@ -174,20 +178,22 @@
       $ juju add-relation mongos:mongos shard1:database
       $ juju add-relation mongos:mongos shard2:database
       $ juju add-relation mongos:mongos shard3:database
-              
+
 
 
 .. revealjs:: Future Plans
 
   * Teststack for openstack upgrades
   * Revise webapps to be juju deployed
-  * Implement NFV 
+  * Implement NFV
   * Ceph SAN
-  * Find most effective scale out solutions DB/Webapp/Infra 
+  * Find most effective scale out solutions DB/Webapp/Infra
 
 .. revealjs:: Questions?
 
-  James Beedy
 
+  `@jamesbeedy <http://twitter.com/jamesbeedy>`_
 
+  `github <http://github.com/jamesbeedy>`_
 
+  `bdx on irc`
