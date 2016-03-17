@@ -1,21 +1,30 @@
 .. revealjs:: HA Openstack Ops
 
-    James Beedy
-    3/16/2016
+.. revealjs::
 
-.. revealjs:: About Me
+  .. revealjs:: About me
 
     Cloud Engineer, Dark Horse Comics
 
-    Sys admin, net admin, storage admin, hacker, stacker
+    Sys admin, net admin, storage admin, hacker
 
     Ubuntu, Debian, FreeBSD, OpenStack, etc
 
+  .. revealjs:: What I do
 
+    Infrastructure hosting and design for public facing web applications, testing environment, staging environment, internal business projects
 
-.. revealjs:: So why Openstack?
+    Software engineers need to learn devops --> Don't you want to know how to do things?
 
-  .. rst-class:: fragment
+    Public cloud, private cloud, co-location, mirroring, distributed computing/networking/storage
+
+.. revealjs:: Openstack History and Adventure
+
+.. revealjs::
+
+  .. revealjs:: So why Openstack?
+
+    .. rst-class:: fragment
 
       Large user base, plugable, zero lock in, opensource, trust
 
@@ -27,20 +36,8 @@
 
       Experience for operators and developers --> larger community ==> stronger/better/safer/faster/reliable software
 
-
-
-.. revealjs:: Why Openstack HA?
-
-  .. rst-class:: fragment
-
-     Need openstack service resiliency
-     
-       *  Maintanence
-       *  0 Down time
-       *  Upgrades
-
-
 .. revealjs:: The beginning
+   :title-heading: h2
 
   .. rst-class:: fragment
 
@@ -59,7 +56,6 @@
       Templates
 
       Chef
-
 
 .. revealjs:: Juju - Big Software - Modeling
    :title-heading: h2
@@ -83,37 +79,6 @@
     .. __: http://jujucharms.com
 
 
-.. revealjs:: Webapps and DBS
-
-  .. rst-class:: fragment
-
-      Every webapp needs the same things, usually in different places
-      
-      Abstract from cfgmgmt --> save cycles
-
-      Automate everything
-
-      Replicable environments accross heterogeneous providers
-
-
-
-.. revealjs:: All Openstack services can be configured to be HA!
-
-  .. rst-class:: fragment
-
-      Different services need different HA architectures
-          Stateless services
-              * API endpoints
-              * Schedulers
-              * Service Agents
-
-          Statefull Services
-              * Messaging queues
-              * Databases
-              * Storage
-
-              
-              
 .. revealjs:: All Openstack services can be configured to be HA!
    :title-heading: h2
    :subtitle: Different techniques can be used for each service
@@ -131,13 +96,11 @@
               * Messaging queues
               * Databases
               * Storage
-
+      
 
 .. revealjs:: Example Juju Openstack Bundle
 
    .. image:: https://raw.githubusercontent.com/jamesbeedy/pgexplain/master/1.png
-
-
 
 .. revealjs:: Deploy MySQL
 
@@ -186,16 +149,24 @@
       $ juju add-relation mongos:mongos shard1:database
       $ juju add-relation mongos:mongos shard2:database
       $ juju add-relation mongos:mongos shard3:database
-              
 
 
-.. __: http://jujucharms.com
-.. __: https://openstack.org
-.. __: https://github.com/jamesbeedy
+
+.. revealjs:: DB Admin Ops
+
+  .. rst-class:: fragment
+
+     Scale out - Distributed INSERT/parallel query, HA, DR
+
+     Performance, Redundancy, Security, High Availability
+
+
+
+
 
 .. revealjs:: Future Plans
 
-  * Teststack for openstack upgrades
+  * HA Teststack for openstack upgrades
   * Revise webapps to be juju deployed
   * Implement NFV 
   * Ceph SAN
