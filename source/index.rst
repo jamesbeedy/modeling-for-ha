@@ -135,8 +135,8 @@
 
 .. revealjs:: Example Juju Openstack Bundle
 
-   .. image:: _images/wjst.png
-    :target: http://lab.hakim.se/meny/
+   .. image:: _images/l3_ha_bundle.png
+    :target: http://github.com/jamesbeedy/pgexplain
     :width: 500
     :height: 400
     :alt: juju status --format tabular
