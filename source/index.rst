@@ -136,7 +136,27 @@
 .. revealjs:: Example Juju Openstack Bundle
 
    .. image:: _images/wjst.png
+    :target: http://lab.hakim.se/meny/
+    :width: 500
+    :height: 400
+    :alt: juju status --format tabular
 
+
+.. revealjs:: Juju Status View
+
+   .. image:: _images/wjst.png
+    :target: http://lab.hakim.se/meny/
+    :width: 500
+    :height: 400
+    :alt: juju status view
+
+.. revealjs:: Juju Gui View
+
+   .. image:: _images/wjst.png
+    :target: http://lab.hakim.se/meny/
+    :width: 500
+    :height: 400
+    :alt: juju gui view
 
 
 .. revealjs:: Deploy MySQL
