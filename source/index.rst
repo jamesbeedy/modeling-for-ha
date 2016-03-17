@@ -53,8 +53,6 @@
 
       Replicable environments across heterogeneous providers!
 
-      Use cfgmgmt tools (chef, puppet, ansible) underneath!
-
       Write charms in any language!
 
       Openstack charms Now developed under the Big Tent!
@@ -79,12 +77,12 @@
 
   .. rst-class:: fragment
 
-      * - Stateless services
+      Stateless services
         - API endpoints
         - Schedulers
         - Service Agents
 
-      * - Stateful Services
+      Stateful Services
         - Messaging queues
         - Databases
         - Storage
