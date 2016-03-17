@@ -1,11 +1,15 @@
 .. revealjs:: HA Openstack Ops
 
     James Beedy
-    3/16/2016
+    3/17/2016
 
-    `Presentation <https://github.com/jamesbeedy/os-ha-meetup-present>`_
+    Presentation
 
-    `Associated materials <https://github.com/jamesbeedy/os_ha_test_stack>`_
+    `https://github.com/jamesbeedy/os-ha-meetup-present <https://github.com/jamesbeedy/os-ha-meetup-present>`_
+
+    Associated Materials
+
+    `https://github.com/jamesbeedy/os_ha_test_stack <https://github.com/jamesbeedy/os_ha_test_stack>`_
 
 .. revealjs:: About Me
 
