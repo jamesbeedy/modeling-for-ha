@@ -95,6 +95,7 @@
  .. rv_code::
 
      # Deploy this presentation
+     # bzr pull lp:~jamesbeedy/charms/trusty/present/dev
 
      $ juju deploy local:trusty/present
      $ juju deploy present-haproxy --config haproxy.yaml
