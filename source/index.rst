@@ -77,29 +77,68 @@
 
   .. rst-class:: fragment
 
-      Stateless services
+      * - Stateless services
         - API endpoints
         - Schedulers
         - Service Agents
 
-      Stateful Services
+      * - Stateful Services
         - Messaging queues
         - Databases
         - Storage
 
 
-.. revealjs:: Lets start small
- :subtitle: presentation
+.. revealjs:: Let's start small
+ :subtitle: this presentation
+
+ .. rv_code::
+
+     # Deploy this presentation
+
+     $ juju deploy local:trusty/present
+     $ juju deploy present-haproxy --config haproxy.yaml
+     $ juju add-relation present-haproxy present
 
 
 
+.. revealjs:: A bit larger
+ :subtitle: HA Mediawiki
+
+  .. rv_code::
+
+    # Deploy HA Mediawiki - Scale out behind haproxy
+
+    $juju deploy haproxy
+    $juju deploy mediawiki
+    $juju deploy mysql
+    $juju add-relation mediawiki:db mysql
+    $juju add-relation mediawiki haproxy
+    $juju expose haproxy
+
+
+.. revealjs:: HA Wordpress
+
+      .. rv_code::
+
+        # Deploy HA Wordpress - Inherent Scaling - no haproxy
+
+        $juju deploy mysql
+        $juju deploy wordpress
+        $juju add-relation mysql wordpress
+        $juju expose wordpress
 
 
 
+.. revealjs:: Corosync, Pacemaker, Haproxy
+ :subtitle: Different haproxy configurations
 
 
+ .. rst-class:: fragment
 
-
+     * - Hacluster charm
+       - Corosync
+       - Pacemaker
+       - Haproxy
 
 
 .. revealjs:: Example Juju Openstack Bundle
@@ -160,13 +199,11 @@
 
   .. rv_code::
 
+      # Replica Set
       $ juju deploy mongodb -n 2
       $ juju add-unit mongodb -n 2
 
-
-    Sharded Cluster
-
-  .. rv_code::
+      # Sharded Cluster
 
       $ juju deploy mongodb configsvr --config charmconf.yaml -n3
       $ juju deploy mongodb mongos
