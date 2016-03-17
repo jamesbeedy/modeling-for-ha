@@ -135,7 +135,7 @@
 
 .. revealjs:: Example Juju Openstack Bundle
 
-   .. image:: _images/1.png
+   .. image:: _images/wjst.png
 
 
 
