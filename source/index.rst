@@ -3,6 +3,10 @@
     James Beedy
     3/16/2016
 
+    `Presentation <https://github.com/jamesbeedy/os-ha-meetup-present>`_
+
+    `Associated materials <https://github.com/jamesbeedy/os_ha_test_stack>`_
+
 .. revealjs:: About Me
 
     Cloud Engineer, Dark Horse Comics
@@ -35,7 +39,7 @@
 .. revealjs:: Juju - Big Software - Modeling
  :title-heading: h3
 
-  .. rst-class:: fragment grow
+  .. rst-class:: fragment
 
       Openstack, Big data stacks, web applications!
 
@@ -50,22 +54,6 @@
       Write charms in any language!
 
       Openstack charms Now developed under the Big Tent!
-
-
-.. revealjs:: So why Openstack?
-
-  .. rst-class:: fragment
-
-      Large user base, plugable, zero lock in, opensource, trust
-
-      Works great for deployments that need to scale, or virtual laptop labs
-
-      Needed a flexible and elastic environment for testing, staging
-
-      Projects are requesting more flexible computing resources
-
-      Experience for operators and developers --> larger community ==> stronger/better/safer/faster/reliable software
-
 
 
 .. revealjs:: Why Openstack HA?
