@@ -88,6 +88,20 @@
         - Databases
         - Storage
 
+.. revealjs:: Corosync, Pacemaker, Haproxy
+ :subtitle: Different haproxy configurations
+
+
+ .. rst-class:: fragment
+
+
+     `Hacluster charm <https://jujucharms.com/hacluster>`_
+
+       - Corosync
+       - Pacemaker
+       - Haproxy
+
+
 
 .. revealjs:: Let's start small
  :subtitle: this presentation
@@ -131,21 +145,6 @@
 
 
 
-.. revealjs:: Corosync, Pacemaker, Haproxy
- :subtitle: Different haproxy configurations
-
-
- .. rst-class:: fragment
-
-
-
-     `Hacluster charm <https://jujucharms.com/hacluster>`_
-
-       - Corosync
-       - Pacemaker
-       - Haproxy
-
-
 .. revealjs:: Example Juju Openstack Bundle
 
    .. image:: _images/l3_ha_bundle.png
@@ -164,6 +163,8 @@
     :alt: juju_status_view
 
 .. revealjs:: Juju Gui View
+
+   `juju gui <https://demo.jujucharms.com/>`_
 
    .. image:: _images/juju_gui.png
     :width: 700
