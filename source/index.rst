@@ -175,11 +175,11 @@
 
 .. revealjs:: Deploy MySQL
 
-   .. raw:: html
+  .. raw:: html
 
      <script src="https://assets.ubuntu.com/v1/juju-cards-v1.0.9.js"></script>
      <div class="juju-card" data-id="trusty/mysql-36"></div>
-    
+
   .. rv_code::
 
       $ juju deploy mysql
@@ -198,7 +198,7 @@
 
 .. revealjs:: Deploy Percona-cluster - ExtraDB
 
-   .. raw:: html
+  .. raw:: html
 
      <script src="https://assets.ubuntu.com/v1/juju-cards-v1.0.9.js"></script>
      <div class="juju-card" data-id="trusty/percona-cluster-129"></div>
