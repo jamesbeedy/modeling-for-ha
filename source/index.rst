@@ -174,10 +174,12 @@
 
 
 .. revealjs:: Deploy MySQL
- .. raw:: html
-     <script src="https://assets.ubuntu.com/v1/juju-cards-v1.0.9.js"></script>
-     <div class="juju-card" data-id="trusty/percona-cluster-129"></div>
 
+   .. raw:: html
+
+     <script src="https://assets.ubuntu.com/v1/juju-cards-v1.0.9.js"></script>
+     <div class="juju-card" data-id="trusty/mysql-36"></div>
+    
   .. rv_code::
 
       $ juju deploy mysql
@@ -187,6 +189,7 @@
 
 .. revealjs:: Deploy PostgreSQL Cluster
 
+
   .. rv_code::
 
       $ juju deploy postgresql
@@ -194,6 +197,12 @@
 
 
 .. revealjs:: Deploy Percona-cluster - ExtraDB
+
+   .. raw:: html
+
+     <script src="https://assets.ubuntu.com/v1/juju-cards-v1.0.9.js"></script>
+     <div class="juju-card" data-id="trusty/percona-cluster-129"></div>
+
 
   .. rv_code::
 
