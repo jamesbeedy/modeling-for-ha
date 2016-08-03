@@ -1,23 +1,28 @@
-.. revealjs:: HA Openstack Ops
+.. revealjs:: Juju Modeling For HA Environments
 
     James Beedy
-    3/17/2016
+    9/3/2016
 
     Presentation
 
-    `https://github.com/jamesbeedy/os-ha-meetup-present <https://github.com/jamesbeedy/os-ha-meetup-present>`_
+    `https://github.com/jamesbeedy/modeling-for-ha <https://github.com/jamesbeedy/modeling-for-ha>`_
 
     Associated Materials
 
-    `https://github.com/jamesbeedy/os_ha_test_stack <https://github.com/jamesbeedy/os_ha_test_stack>`_
+    `https://jujucharms.com <https://jujucharms.com>`_
 
 .. revealjs:: About Me
 
-    Cloud Engineer, Dark Horse Comics
+    Cloud Engineer/DevOps Engineer
 
     Sys admin, net admin, storage admin, hacker, stacker
 
-    Ubuntu, Debian, FreeBSD, OpenStack, etc
+    - GPU hadware hacker - 
+
+    - First 24TB SSD Raid -
+
+    - Open Source Community -    
+    
 
 .. revealjs:: The beginning
 
@@ -39,13 +44,19 @@
 
       Chef
 
+      Ansible
+
+      ...
+
+      -> Juju
+
 
 .. revealjs:: Juju - Big Software - Modeling
  :title-heading: h3
 
   .. rst-class:: fragment
 
-      Openstack, Big data stacks, web applications!
+      Openstacks, Big data stacks, web applications!
 
       Abstract from cfgmgmt --> save cycles!
 
@@ -55,11 +66,9 @@
 
       Write charms in any language!
 
-      Openstack charms now developed under the Big Tent!
 
-
-.. revealjs:: Why Openstack HA?
- :subtitle: Must have openstack service resiliency
+.. revealjs:: Why Juju? Why HA?
+ :subtitle: We must have service resiliency!
 
   .. rst-class:: fragment
 
@@ -70,7 +79,7 @@
    * - Release Upgrades
 
 
-.. revealjs:: All Openstack services can be HA!
+.. revealjs:: Different types of HA
  :title-heading: h2
  :subtitle: Different techniques can/should be used for each type of service
  :subtitle-heading: h4
@@ -109,9 +118,8 @@
  .. rv_code::
 
      # Deploy this presentation
-     # bzr pull lp:~jamesbeedy/charms/trusty/present/dev
 
-     $ juju deploy local:trusty/present
+     $ juju deploy cs:~jamesbeedy/present
      $ juju deploy present-haproxy --config haproxy.yaml
      $ juju add-relation present-haproxy present
 
@@ -231,14 +239,6 @@
       $ juju add-relation mongos:mongos shard3:database
 
 
-
-.. revealjs:: Future Plans
-
-  * Teststack for openstack upgrades
-  * Revise webapps to be juju deployed
-  * Implement NFV
-  * Ceph SAN
-  * Find most effective scale out solutions DB/Webapp/Infra
 
 .. revealjs:: Questions?
 
